@@ -15,12 +15,12 @@ public class PasswordValidatorTest {
 //	}
 
 	static Stream<Arguments> createContrasenyesValides() {
-		return Stream.of(Arguments.of("abcdefg1"), Arguments.of("ABCDEFG1"),Arguments.of("abcdef11"), Arguments.of("ABCDEF11"),
-				Arguments.of("aBCDEF11"));
+		return Stream.of(Arguments.of("aBCDEF11s4"),Arguments.of("aBCD2F11s4"),Arguments.of("aBCDEFa1s4"));
 	}
 	
 	static Stream<Arguments> createContrasenyesNoValides() {
-		return Stream.of(Arguments.of("abcdef1"), Arguments.of("ABCDEF1"),Arguments.of("abcdefgh"), Arguments.of("ABCDEFGH"));
+		return Stream.of(Arguments.of("abcdef1"), Arguments.of("ABCDEF1"),Arguments.of("abcdefgh"), Arguments.of("ABCDEFGH"),
+				Arguments.of("abcdefg1"), Arguments.of("ABCDEFG1"),Arguments.of("abcdef11"), Arguments.of("ABCDEF11"));
 	}
 
 	@ParameterizedTest
